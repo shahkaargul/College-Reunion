@@ -1,0 +1,1347 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header {
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 39, 101, 0.7);
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.gradient-text {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #fff, #64b5f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #002765;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: slideDown 0.5s ease;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #64b5f6;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 5%;
+    animation: fadeIn 1s ease-out;
+}
+
+.welcome-section {
+    text-align: center;
+    background: white;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;
+    color: #002765;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #002765;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #003c9e;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(45deg, #002765, #004ba0);
+    color: white;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: white;
+    color: #002765;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Updates Section */
+.updates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.update-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    background: #002765;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #64b5f6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Teacher Cards Styling and Animation */
+.teachers-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.teachers-column {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.teachers-column:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .teachers-container {
+        flex-direction: column;
+    }
+    
+    .teachers-column {
+        width: 100%;
+    }
+}
+
+.faculty-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.teacher-card {
+    width: 100%;
+    margin: 0;
+}
+
+.teacher-card {
+    perspective: 1000px;
+    height: 400px;
+    width: 300px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.teacher-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #f8f9fa;
+}
+
+.card-back h3 {
+    margin-bottom: 15px;
+    color: #002765;
+}
+
+.card-back p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.teacher-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 3px solid #002765;
+    transition: transform 0.3s ease;
+    opacity: 1 !important;
+}
+
+.teacher-card:hover .teacher-image {
+    transform: scale(1.05);
+}
+
+.thank-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thank-btn:hover {
+    background: white;
+    color: #002765;
+}
+
+[data-aos] {
+    transform: translateY(20px);
+    transition-property: transform;
+}
+
+[data-aos].aos-animate {
+    transform: translateY(0);
+}
+
+/* Message Section Animation */
+.message-section {
+    padding: 4rem 2rem;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.message-container {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.message-container.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #002765;
+    position: relative;
+    padding: 2rem;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 4rem;
+    color: #002765;
+    opacity: 0.2;
+    position: absolute;
+}
+
+blockquote::before {
+    top: -10px;
+    left: -10px;
+}
+
+blockquote::after {
+    bottom: -40px;
+    right: -10px;
+}
+
+/* Timeline styling */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(180deg, #002765, #0066ff);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.event-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.event-item:nth-child(odd) {
+    left: 0;
+    padding-right: 50px;
+}
+
+.event-item:nth-child(even) {
+    left: 50%;
+    padding-left: 50px;
+}
+
+.event-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #002765;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    top: 20px;
+}
+
+.event-item:nth-child(odd)::before {
+    right: -12px;
+}
+
+.event-item:nth-child(even)::before {
+    left: -12px;
+}
+
+.event-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #002765;
+    margin-bottom: 10px;
+}
+
+.location {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #f0f4ff;
+    border-radius: 20px;
+    color: #002765;
+}
+
+.location i {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .event-item {
+        width: 100%;
+        padding-left: 70px;
+    }
+    
+    .event-item:nth-child(odd) {
+        left: 0;
+        padding-right: 20px;
+    }
+    
+    .event-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .event-item::before {
+        left: 18px;
+    }
+}
+
+/* Download section styling */
+.download-schedule {
+    text-align: center;
+    padding: 40px;
+    margin: 40px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #002765, #0066ff);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 39, 101, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .event-item {
+        padding-left: 45px;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Venue page specific animations and styles */
+.venue-info {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.venue-description {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.map-container {
+    animation: slideInFromRight 1s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.transport-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.transport-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.transport-card:hover {
+    transform: translateY(-10px);
+}
+
+.transport-card i {
+    font-size: 2.5rem;
+    color: #002765;
+    margin-bottom: 1rem;
+}
+
+/* Animation keyframes */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form Animations and Styling */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 39, 101, 0.1);
+    backdrop-filter: blur(10px);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease forwards;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #002765;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #002765;
+    box-shadow: 0 0 0 3px rgba(0, 39, 101, 0.1);
+    transform: scale(1.01);
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #002765, #0052cc);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 39, 101, 0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Input validation styling */
+.form-group input:valid,
+.form-group select:valid {
+    border-color: #28a745;
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Floating label animation */
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 0.85em;
+    color: #002765;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Success message styling */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.special-thanks {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.special-thanks h2 {
+    color: #002765;
+    margin-bottom: 2rem;
+}
+
+.thanks-message {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thanks-message blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 4px solid #002765;
+    background-color: white;
+}
+
+.thanks-message .signature {
+    font-weight: 600;
+    color: #002765;
+}
+
+/* Navbar Animation */
+.navbar {
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Header Animation */
+.header-content h1 {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.bounce-in {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+/* Venue Page Specific Styles */
+.venue-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.venue-info {
+    background: rgba(0, 39, 101, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease forwards;
+}
+
+.venue-info h2 {
+    color: #002765;
+    margin-bottom: 1.5rem;
+}
+
+.venue-info p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.venue-info i {
+    color: #002765;
+    font-size: 1.2rem;
+}
+
+.venue-description {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.thank-btn {
+    background: #ff4b6e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thank-btn:hover {
+    background: #ff2d55;
+    transform: scale(1.05);
+}
+
+.thank-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.floating-heart {
+    position: absolute;
+    color: #ff4b6e;
+    font-size: 20px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+}
+
+.faculty-heading {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    color: #002765;
+    font-size: 2rem;
+}
+
+.faculty-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.checkbox-label:hover {
+    transform: translateX(5px);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #002765;
+}
+
+/* Animation for new form groups */
+.form-group {
+    transition: all 0.3s ease;
+}
+
+.form-group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkbox-group {
+        padding: 0 10px;
+    }
+    
+    .checkbox-label {
+        font-size: 0.9em;
+    }
+}
+
+/* Heart animation styles */
+.floating-heart {
+    position: absolute;
+    color: red;
+    animation: float-up 3s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+}
+
+.thank-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #002765;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.thank-btn:hover {
+    background: #003d9e;
+}
+
+.thank-btn.clicked {
+    pointer-events: none;
+}
+
+.animated-divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #002765,
+        #002765,
+        transparent
+    );
+    transform: translateX(-50%);
+    animation: dividerGlow 2s ease-in-out infinite;
+}
+
+@keyframes dividerGlow {
+    0% {
+        opacity: 0.3;
+        height: 70%;
+    }
+    50% {
+        opacity: 1;
+        height: 90%;
+    }
+    100% {
+        opacity: 0.3;
+        height: 70%;
+    }
+}
+
+.teacher-image.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-image.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.teacher-name-animate {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.teacher-name-animate:hover {
+    color: #002765;
+}
+
+.teacher-name-animate:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #002765;
+    transition: all 0.3s ease;
+}
+
+.teacher-name-animate:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.thank-you-section {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.thank-all-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #002765;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.thank-all-btn:hover {
+    background-color: #001845;
+    transform: scale(1.05);
+}
+
+/* Add these styles to your CSS file */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  color: red;
+  animation: flyHeart 2s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes flyHeart {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) translateY(-80px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(-120px);
+    opacity: 0;
+  }
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-container input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-container button {
+  padding: 0.8rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login-container button:hover {
+  background: #0056b3;
+}
+.deadline-banner {
+    background-color: #002765;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-status {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+.deadline-popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.deadline-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.event-item.active .event-content {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 39, 101, 0.2);
+  }
+  
+  .event-item.next-event .event-content {
+    border: 2px solid #002765;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 39, 101, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 39, 101, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 39, 101, 0);
+    }
+  }
+
+/* Hover effects */
+.venue-info:hover,
+.venue-description:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Add these styles for the login overlay */
+#loginOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#loginForm {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+#loginOverlay.show {
+    opacity: 1;
+}
+
+#loginOverlay.show #loginForm {
+    transform: translateY(0);
+} 

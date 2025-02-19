@@ -1,0 +1,122 @@
+/* Header Animations */
+.animate-header {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-text {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Navbar Animations */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 39, 101, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Social Links Animation */
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Hover Effects */
+.btn, .cta-button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover, .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn::after, .cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover::after, .cta-button:hover::after {
+    transform: translateX(0);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Card Hover Effects */
+.highlight-card {
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Update Card Animations */
+.update-card {
+    transition: all 0.3s ease;
+}
+
+.update-card:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar.sticky {
+        background: rgba(0, 39, 101, 0.9);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .social-links a:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn:hover, .cta-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .highlight-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .update-card:hover {
+        transform: scale(1.01);
+    }
+}

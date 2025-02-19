@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery - GIKI School & College Reunion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky" id="navbar">
+      <div class="logo">GIKI School & College Reunion</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="volunteers.html">Volunteers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="venue.html">Venue</a></li>
+      </ul>
+    </nav>
+
+    <section class="gallery-header">
+      <h1>Our Memories Through the Years</h1>
+      <p>Browse through our collection of cherished moments</p>
+    </section>
+
+    <div class="gallery-filters">
+      <div class="filter-square active" data-filter="all">
+      </div>
+    </div>
+
+    <section class="gallery-grid">
+      <!-- Gallery items will be dynamically added using JavaScript -->
+    </section>
+
+    <button id="back-to-top" title="Back to Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://github.com/shahkaargul" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://hi-in.facebook.com/ShahkaarGul99/" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/shahkaar._.gul/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shahkaar-gul-075a3231a/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:contactshahkaar@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.threads.net/@shahkaar._.gul" class="social-icon"><i class="fa-brands fa-threads"></i></a>
+      </div>
+      <p>GIKI School & College</p>
+      <p>Designed by Muhammad Shahkaar</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
